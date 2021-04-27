@@ -735,7 +735,7 @@
                         }
 
                         sonde_positions[sonde_id].marker = L.marker([telem.lat, telem.lon, telem.alt],{icon: sondeAscentIcons[sonde_positions[sonde_id].colour]})
-                            .bindTooltip('<div class="tooltip-container">' + sonde_id + '<div class="tooltip-container" style="color: #005ec1;">' + _alt +  _vel_v +  _vel_h + '</div></div>',{permanent:false, direction:'right', className: 'sondeTooltip', offset: [10,0], interactive: false, opacity: 0.7 })
+                            .bindTooltip('<div class="tooltip-container">' + sonde_id + '<div class="tooltip-container" style="color: #005ec1;">' + _alt +  _vel_v +  _vel_h + '</div></div>',{permanent:true, direction:'right', className: 'sondeTooltip', offset: [10,0], interactive: false, opacity: 0.7 })
                             .addTo(mymap);
 
                         if(autorx_config.station_lat != 0.0){
@@ -806,7 +806,7 @@
                             _vel_h = (telem.vel_h*3.6).toFixed(0) + 'km/h  ';
                         }
                     sonde_positions[msg.id].marker = L.marker([msg.lat, msg.lon, msg.alt],{title:msg.id, icon: sondeAscentIcons[sonde_positions[msg.id].colour]})
-                        .bindTooltip('<div class="tooltip-container">' + msg.id + '<div class="tooltip-container" style="color: #005ec1;">' + _alt +  _vel_v +  _vel_h + '</div></div>',{permanent:false, direction:'right', className: 'sondeTooltip', offset: [10,0], interactive: false, opacity: 0.7})
+                        .bindTooltip('<div class="tooltip-container">' + msg.id + '<div class="tooltip-container" style="color: #005ec1;">' + _alt +  _vel_v +  _vel_h + '</div></div>',{permanent:true, direction:'right', className: 'sondeTooltip', offset: [10,0], interactive: false, opacity: 0.7})
                         .addTo(mymap);
 
                     // If there is a station location defined, show the path from the station to the sonde.
