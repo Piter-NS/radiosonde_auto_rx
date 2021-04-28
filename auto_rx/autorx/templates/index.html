@@ -1390,172 +1390,171 @@
     <!-- Wrapper for settings sidebar -->   
     <div id="mySettings" class="settings">
         <a href="javascript:void(0)" class="closebtn2" id="closebtn2" onclick="changeSettings()">&#10006;</a>
-        <br><h2>Settings</h2>
+        <h1 style="color: white; text-align: center; margin: 0.4em;">Settings</h1>
         <div class="scrollsettings" id="scrollsettingsid">
-            <h2>Table Options</h2>
+            <div style="margin-left:50px;">
+              <h2 style="display:inline;vertical-align:middle;">Table Options</h2>
               <form>
-                  <input type="checkbox" class="0" id="checkbox0" checked>
-                  <label> SDR</label><br>
-                  <input type="checkbox" class="1" id="checkbox1" checked>
-                  <label> Age</label><br>
-                  <input type="checkbox" class="2" id="checkbox2" checked>
-                  <label> Type</label><br>
-                  <input type="checkbox" class="3" id="checkbox3" checked>
-                  <label> Frequency</label><br>
-                  <input type="checkbox" class="4" id="checkbox4" checked>
-                  <label> ID</label><br>
-                  <input type="checkbox" class="5" id="checkbox5" checked>
-                  <label> Time</label><br>
-                  <input type="checkbox" class="6" id="checkbox6" checked>
-                  <label> Frame</label><br>
-                  <input type="checkbox" class="7" id="checkbox7" checked>
-                  <label> Latitude</label><br>
-                  <input type="checkbox" class="8" id="checkbox8" checked>
-                  <label> Longitude</label><br>
-                  <input type="checkbox" class="9" id="checkbox9" checked>
-                  <label> Altitude</label><br>
-                  <input type="checkbox" class="10" id="checkbox10" checked>
-                  <label> Velocity</label><br>
-                  <input type="checkbox" class="11" id="checkbox11" checked>
-                  <label> Ascent Rate</label><br>
-                  <input type="checkbox" class="12" id="checkbox12" checked>
-                  <label> Temperature</label><br>
-                  <input type="checkbox" class="13" id="checkbox13" checked>
-                  <label> Humidity</label><br>
-                  <input type="checkbox" class="14" id="checkbox14" checked>
-                  <label> Azimuth</label><br>
-                  <input type="checkbox" class="15" id="checkbox15" checked>
-                  <label> EI</label><br>
-                  <input type="checkbox" class="16" id="checkbox16" checked>
-                  <label> Range</label><br>
-                  <input type="checkbox" class="17" id="checkbox17" checked>
-                  <label> SNR</label><br>
-                  <input type="checkbox" class="18" id="checkbox18" checked>
-                  <label> Other</label><br><br>
+                <input type="checkbox" class="0" id="checkbox0" checked>
+                <label> SDR</label><br>
+                <input type="checkbox" class="1" id="checkbox1" checked>
+                <label> Age</label><br>
+                <input type="checkbox" class="2" id="checkbox2" checked>
+                <label> Type</label><br>
+                <input type="checkbox" class="3" id="checkbox3" checked>
+                <label> Frequency</label><br>
+                <input type="checkbox" class="4" id="checkbox4" checked>
+                <label> ID</label><br>
+                <input type="checkbox" class="5" id="checkbox5" checked>
+                <label> Time</label><br>
+                <input type="checkbox" class="6" id="checkbox6" checked>
+                <label> Frame</label><br>
+                <input type="checkbox" class="7" id="checkbox7" checked>
+                <label> Latitude</label><br>
+                <input type="checkbox" class="8" id="checkbox8" checked>
+                <label> Longitude</label><br>
+                <input type="checkbox" class="9" id="checkbox9" checked>
+                <label> Altitude</label><br>
+                <input type="checkbox" class="10" id="checkbox10" checked>
+                <label> Velocity</label><br>
+                <input type="checkbox" class="11" id="checkbox11" checked>
+                <label> Ascent Rate</label><br>
+                <input type="checkbox" class="12" id="checkbox12" checked>
+                <label> Temperature</label><br>
+                <input type="checkbox" class="13" id="checkbox13" checked>
+                <label> Humidity</label><br>
+                <input type="checkbox" class="14" id="checkbox14" checked>
+                <label> Azimuth</label><br>
+                <input type="checkbox" class="15" id="checkbox15" checked>
+                <label> EI</label><br>
+                <input type="checkbox" class="16" id="checkbox16" checked>
+                <label> Range</label><br>
+                <input type="checkbox" class="17" id="checkbox17" checked>
+                <label> SNR</label><br>
+                <input type="checkbox" class="18" id="checkbox18" checked>
+                <label> Other</label><br><br>
               </form>
-              <div style="margin-left:60px;">
-                  <h2 style="display:inline;vertical-align:middle;">Show Table</h2>
-                  &nbsp;
-                  <div style="display:inline;vertical-align:middle;">
-                  <label class="switch">
-                    <input type="checkbox" onchange="showTable(this)" id="showtablebutton">
-                    <span class="slider round"></span>
-                  </label>   
-                  </div>
-                  <br>
-                  <br>
-                  <h2 style="display:inline;vertical-align:middle;">Show Scan Plot</h2>
-                  &nbsp;
-                  <div style="display:inline;vertical-align:middle;">
-                  <label class="switch">
-                    <input type="checkbox" onchange="showScan(this)" id="showscanbutton">
-                    <span class="slider round"></span>
-                  </label>
-                  </div>
-                  <br>
-                  <br>
-                  <h2 style="display:inline;vertical-align:middle;">Show Map</h2>
-                  &nbsp;
-                  <div style="display:inline;vertical-align:middle;">
-                  <label class="switch">
-                    <input type="checkbox" onchange="showMap(this)" id="showmapbutton">
-                    <span class="slider round"></span>
-                  </label>
-                  </div>
-                  <br>
-                  <br>
-                  <h2 style="display:inline;vertical-align:middle;">Dark Mode</h2>
-                  &nbsp;
-                  <div style="display:inline;vertical-align:middle;">
-                  <label class="switch">
-                    <input type="checkbox" id="showdarkbutton">
-                    <span class="slider round"></span>
-                  </label>
-                  </div>
-                  <br>
-                  <br>
-                  <h2 style="display:inline;vertical-align:middle;">Show UTC Time</h2>
-                  &nbsp;
-                  <div style="display:inline;vertical-align:middle;">
-                  <label class="switch">
-                    <input type="checkbox" id="showUTCbutton">
-                    <span class="slider round"></span>
-                  </label>
-                  </div>
-                  <br>
-                  <br>
-                  <h2 style="display:inline;vertical-align:middle;">Set Pagination Size</h2>
-                  &nbsp;
-                  <div style="display:inline;vertical-align:middle;">
-                  <select id="paginationSelector">
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                    <option value="4">Four</option>
-                    <option value="5">Five</option>
-                    <option value="6">Six</option>
-                    <option value="7">Seven</option>
-                    <option value="8">Eight</option>
-                    <option value="9">Nine</option>
-                    <option value="10">Ten</option>
+              <h2 style="display:inline;vertical-align:middle;">Show Table</h2>
+              &nbsp;
+              <div style="display:inline;vertical-align:middle;">
+                <label class="switch">
+                  <input type="checkbox" onchange="showTable(this)" id="showtablebutton">
+                  <span class="slider round"></span>
+                </label>
+              </div>
+              <br>
+              <br>
+              <h2 style="display:inline;vertical-align:middle;">Show Scan Plot</h2>
+              &nbsp;
+              <div style="display:inline;vertical-align:middle;">
+                <label class="switch">
+                  <input type="checkbox" onchange="showScan(this)" id="showscanbutton">
+                  <span class="slider round"></span>
+                </label>
+              </div>
+              <br>
+              <br>
+              <h2 style="display:inline;vertical-align:middle;">Show Map</h2>
+              &nbsp;
+              <div style="display:inline;vertical-align:middle;">
+                <label class="switch">
+                  <input type="checkbox" onchange="showMap(this)" id="showmapbutton">
+                  <span class="slider round"></span>
+                </label>
+              </div>
+              <br>
+              <br>
+              <h2 style="display:inline;vertical-align:middle;">Dark Mode</h2>
+              &nbsp;
+              <div style="display:inline;vertical-align:middle;">
+                <label class="switch">
+                  <input type="checkbox" id="showdarkbutton">
+                  <span class="slider round"></span>
+                </label>
+              </div>
+              <br>
+              <br>
+              <h2 style="display:inline;vertical-align:middle;">Show UTC Time</h2>
+              &nbsp;
+              <div style="display:inline;vertical-align:middle;">
+                <label class="switch">
+                  <input type="checkbox" id="showUTCbutton">
+                  <span class="slider round"></span>
+                </label>
+              </div>
+              <br>
+              <br>
+              <h2 style="display:inline;vertical-align:middle;">Set Pagination Size</h2>
+              &nbsp;
+              <div style="display:inline;vertical-align:middle;">
+                <select id="paginationSelector">
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                  <option value="4">Four</option>
+                  <option value="5">Five</option>
+                  <option value="6">Six</option>
+                  <option value="7">Seven</option>
+                  <option value="8">Eight</option>
+                  <option value="9">Nine</option>
+                  <option value="10">Ten</option>
                 </select>
-                  </div>
-                  <br>
-                  <br>
-                  <h2 style="display:inline;vertical-align:middle;">Follow Sonde</h2>
-                  &nbsp;
-                  <div style="display:inline;vertical-align:middle;">
-                  <label class="switch">
-                    <input type="checkbox" onchange="autoFollow(this)" id="sondeAutoFollow">
-                    <span class="slider round"></span>
-                  </label>
-                  </div>
-                  <br>
-                  <br>   
-                  <h2 style="display:inline;vertical-align:middle;">Show Imperial Units</h2>
-                  &nbsp;
-                  <div style="display:inline;vertical-align:middle;">
-                  <label class="switch">
-                    <input type="checkbox" id="showimperialbutton">
-                    <span class="slider round"></span>
-                  </label>
-                  </div>
-                  <br>
-                  <br>
-                  <h2 style="display:inline;vertical-align:middle;">Show Software Version</h2>
-                  &nbsp;
-                  <div style="display:inline;vertical-align:middle;">
-                  <label class="switch">
-                    <input type="checkbox" id="showversionbutton">
-                    <span class="slider round"></span>
-                  </label>
-                  </div>
-                  <br>
-                  <br>                  
-                  <h2 style="display:inline;vertical-align:middle;">Live KML</h2>
-                  &nbsp;
-                  <div style="display:inline;vertical-align:middle;">
-                      <button onclick="window.location.href='/rs.kml'">SHOW</button>
-                  </div>
-                  <br>
-                  <br>
-                  <h2 style="display:inline;vertical-align:middle;">Reset Page</h2>
-                  &nbsp;
-                  <div style="display:inline;vertical-align:middle;">
-                    <button onclick="deleteAllCookies()">RESET</button>
-                  </div>                 
-                  <br>
-                  <br>
-                  <h2 style="display:inline;vertical-align:middle;">Controls</h2>
-                  &nbsp;
-                  <div style="display:inline;vertical-align:middle;">
-                    <button id="open-controls" onclick="openModal()">OPEN</button>
-                  </div>                 
-                  <br>
-                  <br>
-                  <br>
-            </div>       
-        </div>    
+              </div>
+              <br>
+              <br>
+              <h2 style="display:inline;vertical-align:middle;">Follow Sonde</h2>
+              &nbsp;
+              <div style="display:inline;vertical-align:middle;">
+                <label class="switch">
+                  <input type="checkbox" onchange="autoFollow(this)" id="sondeAutoFollow">
+                  <span class="slider round"></span>
+                </label>
+              </div>
+              <br>
+              <br>
+              <h2 style="display:inline;vertical-align:middle;">Show Imperial Units</h2>
+              &nbsp;
+              <div style="display:inline;vertical-align:middle;">
+                <label class="switch">
+                  <input type="checkbox" id="showimperialbutton">
+                  <span class="slider round"></span>
+                </label>
+              </div>
+              <br>
+              <br>
+              <h2 style="display:inline;vertical-align:middle;">Show Software Version</h2>
+              &nbsp;
+              <div style="display:inline;vertical-align:middle;">
+                <label class="switch">
+                  <input type="checkbox" id="showversionbutton">
+                  <span class="slider round"></span>
+                </label>
+              </div>
+              <br>
+              <br>
+              <h2 style="display:inline;vertical-align:middle;">Live KML</h2>
+              &nbsp;
+              <div style="display:inline;vertical-align:middle;">
+                <button onclick="window.location.href='/rs.kml'">SHOW</button>
+              </div>
+              <br>
+              <br>
+              <h2 style="display:inline;vertical-align:middle;">Reset Page</h2>
+              &nbsp;
+              <div style="display:inline;vertical-align:middle;">
+                <button onclick="deleteAllCookies()">RESET</button>
+              </div>
+              <br>
+              <br>
+              <h2 style="display:inline;vertical-align:middle;">Controls</h2>
+               &nbsp;
+              <div style="display:inline;vertical-align:middle;">
+                <button id="open-controls" onclick="openModal()">OPEN</button>
+              </div>
+              <br>
+              <br>
+            </div>
+        </div>
         <div id="downdiv">
             <i class="fa fa-angle-down" style="font-size:60px;opacity:1;"></i>
         </div>
