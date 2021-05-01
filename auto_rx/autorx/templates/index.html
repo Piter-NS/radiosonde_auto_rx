@@ -101,10 +101,10 @@
                 if (getCookie('UTC') == 'false') {
                     // Check if entry is important.
                     if (msg.level == "INFO") {
-                        var log_entry = "<tr><td><em>" + msg.level + "</em><br><b>" + msg.msg + "</b><br>" + log_time.toLocaleString("en-AU") + "</td></tr>";
+                        var log_entry = "<tr><td>" + log_time.toLocaleString("en-AU") +  " – " + msg.level + "<br><em style='font-size: 15px;'>" + msg.msg + "</em></td></tr>";
                     } else {
                         // If entry is important colour text red.
-                        var log_entry = "<tr><td><em>" + msg.level + "</em><br><b style='color:red'>" + msg.msg + "</b><br>" + log_time.toLocaleString("en-AU") + "</td></tr>";
+                        var log_entry = "<tr><td>" + log_time.toLocaleString("en-AU") +  " – " + msg.level + "<br><em style='font-size: 15px; color:red;'>" + msg.msg + "</em></td></tr>"
                         if (msg.level == "ERROR" || msg.level == "CRITICAL") {
                             if (document.getElementById("mySidenav").offsetWidth == 0) {
                                 $('#log-tray').css('color', 'red');
@@ -113,10 +113,10 @@
                     }
                 } else {
                     if (msg.level == "INFO") {
-                        var log_entry = "<tr><td><em>" + msg.level + "</em><br><b>" + msg.msg + "</b><br>" + msg.timestamp + "</td></tr>";
+                        var log_entry = "<tr><td>"  + msg.timestamp +  " UTC – " + msg.level + "<br><em style='font-size: 15px;'>" + msg.msg + "</em></td></tr>";
                     } else {
                         // If entry is important colour text red.
-                        var log_entry = "<tr><td><em>" + msg.level + "</em><br><b style='color:red'>" + msg.msg + "</b><br>" + msg.timestamp + "</td></tr>";
+                        var log_entry = "<tr><td>"  + msg.timestamp +  " UTC – " + msg.level + "<br><em style='font-size: 15px; color:red;'>" + msg.msg + "</em></td></tr>";
                         if (msg.level == "ERROR" || msg.level == "CRITICAL") {
                             if (document.getElementById("mySidenav").offsetWidth == 0) {
                                 $('#log-tray').css('color', 'red');
