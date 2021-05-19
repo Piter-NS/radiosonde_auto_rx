@@ -320,7 +320,7 @@ def read_log_file(filename, skewt_decimation=10):
         _press = None
     
     if "snr" in fields:
-        _output['snr'] = _data[fields["snr"]]
+        _output['snr'] = _data[fields["snr"]].tolist()
 
     _output["skewt"] = calculate_skewt_data(
         _data[fields["datetime"]],
@@ -361,7 +361,7 @@ def calculate_skewt_data(
         # We only have descent data.
         return []
 
-    if altitude[0] > 15000:
+    if altitude[0] > 20000:
         # No point plotting SkewT plots for data only gathered above 10km altitude...
         return []
 
@@ -422,8 +422,9 @@ def calculate_skewt_data(
                 }
             )
 
-            # Only produce data up to 100hPa, which is the top of the skewt plot.
-            if _pressure < 100.0:
+            # Only produce data up to 50hPa (~20km alt), which is the top of the skewt plot.
+            # We *could* go above this, but the data becomes less useful at those altitudes.
+            if _pressure < 50.0:
                 break
 
         except Exception as e:
@@ -455,6 +456,7 @@ def read_log_by_serial(serial, skewt_decimation=25):
 
 if __name__ == "__main__":
     import sys
+    import json
 
     logging.basicConfig(
         format="%(asctime)s %(levelname)s:%(message)s", level=logging.DEBUG
@@ -470,8 +472,7 @@ if __name__ == "__main__":
     _stop = time.time()
     print(f"Quicklook: {_stop-_start}")
 
-    print(_quicklook)
 
     if len(sys.argv) > 1:
         print(f"Attempting to read serial: {sys.argv[1]}")
-        print(read_log_by_serial(sys.argv[1]))
+        print(json.dumps(read_log_by_serial(sys.argv[1])))
